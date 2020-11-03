@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar(){
 return (
     <nav>
-    <ul>
+    {/* <ul>
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -16,7 +16,7 @@ return (
       <li>
         <Link to="/about">About</Link>
       </li>
-    </ul>
+    </ul> */}
   </nav> 
 
 

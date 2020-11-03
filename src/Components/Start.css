@@ -1,0 +1,10 @@
+.start {
+  background-image: url("./Images/fitness\ image.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
