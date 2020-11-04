@@ -1,42 +1,14 @@
-import React from 'react'
+import React from "react";
+import { ReactComponent as Logo } from "./NavBar Logo/fit-me-white.svg";
+import "./Navbar.css";
 
-function Navbar(){
-return (
-    <nav>
-    {/* <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <link to="/exercise">Exercise</link>
-      </li>
-      <li>
-        <Link to="/BodyPart">ExerciseCategory</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-    </ul> */}
-  </nav> 
-
-
-)
+function Navbar() {
+  return (
+    <div>
+      <nav className="Navbar">
+        <Logo className="NavLogo" />
+      </nav>
+    </div>
+  );
 }
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
