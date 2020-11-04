@@ -15,7 +15,7 @@ class Exercises extends Component {
     }
 
     render() {
-      return [<ExercisesHeader />, <ExercisesList />];
+      return [<ExercisesHeader key={'Exercises\' Header'}/>, <ExercisesList key={'Exercises\' List'}/>];
     }
 }
 

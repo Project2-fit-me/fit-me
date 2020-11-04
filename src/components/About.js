@@ -15,7 +15,7 @@ class About extends Component {
     }
 
     render() {
-      return [<AboutUs />, <ContactUs />, <SocialMedia />];
+      return [<AboutUs key={'About Us'}/>, <ContactUs key={'Contacts'}/>, <SocialMedia key={'Social Net Icons'}/>];
     }
 }
 

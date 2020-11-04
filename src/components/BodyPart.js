@@ -9,7 +9,7 @@ import BF from './BodyPart-pics/Body-Front.jpg';
 
 const BodyFrontImg = (
   <figure>
-    <img src={BF} alt='Body Front' usemap="#bodypart-front" />
+    <img src={BF} alt='Body Front' useMap="#bodypart-front" />
     <map name="bodypart-front">
       <area className='calves-area' alt="Calves" href="../exercises" coords="156,749,358,975" shape="rect" />
       <area className='legs-area' alt="Legs" href="../exercises" coords="158,478,357,717" shape="rect" />
@@ -25,7 +25,7 @@ const BodyFrontImg = (
 
 const BodyBackImg = (
   <figure>
-    <img src={BB} alt='Body Back' usemap="#bodypart-back" />
+    <img src={BB} alt='Body Back' useMap="#bodypart-back" />
     <map name="bodypart-back">
       <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="112,186,49" shape="circle" />
       <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="340,187,50" shape="circle" />
@@ -69,7 +69,7 @@ class BodyPart extends Component {
       return (
         <main>
           <figcaption>
-            Click over the body area you want
+            Choose the body part you want
           </figcaption>
 
           {this.state.isBF ? BodyFrontImg : BodyBackImg} 
