@@ -1,0 +1,35 @@
+map area {
+    outline: none;
+}
+
+.calves-area {
+    cursor: url('./BodyPart-pics/calvesIcon.png'), auto;
+}
+
+.legs-area {
+    cursor: url('./BodyPart-pics/legsIcon.png'), auto;
+}
+
+.arms-area {
+    cursor: url('./BodyPart-pics/armsIcon.png'), auto;
+}
+
+.abs-area {
+    cursor: url('./BodyPart-pics/absIcon.png'), auto;
+}
+
+.chest-area {
+    cursor: url('./BodyPart-pics/chestIcon.png'), auto;
+}
+
+.shoulders-area {
+    cursor: url('./BodyPart-pics/shouldersIcon.png'), auto;
+}
+
+.back-area {
+    cursor: url('./BodyPart-pics/backIcon.png'), auto;
+}
+
+section img:hover {
+    cursor: pointer;
+}

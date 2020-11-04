@@ -13,6 +13,7 @@ class AboutUs extends Component {
     render() {
       return (
 
+        <div></div>
 
       );
     }

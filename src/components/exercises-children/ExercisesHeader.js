@@ -13,6 +13,7 @@ class ExercisesHeader extends Component {
     render() {
       return (
 
+        <div></div>
 
       );
     }

@@ -13,6 +13,7 @@ class ExercisesCard extends Component {
     render() {
       return (
 
+        <div></div>
 
       );
     }
