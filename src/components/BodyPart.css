@@ -30,6 +30,6 @@ map area {
     cursor: url('./BodyPart-pics/backIcon.png'), auto;
 }
 
-section img:hover {
+.icon {
     cursor: pointer;
 }
