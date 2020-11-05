@@ -1,7 +1,7 @@
 import React from 'react';
+import {withRouter} from 'react-router';
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -14,38 +14,29 @@ import Exercises from './components/Exercises';
 import BodyPart from './components/BodyPart';
 
 
-function App() {
+function App({location}) {
   return (
-    <Router> 
       <div className="App">
-    
+
+        {/* the Navbar component is not present in the Home page */}
+        {location.pathname!=='/' && <Navbar />}
+        
         <Switch>
-          <Route exact path='/'>
-            <Start />
-          </Route>  
-
-          <Route path='/about'>
-            <Navbar />
-            <About />
-            <Footer />
-          </Route> 
-
-          <Route path='/bodypart'>
-            <Navbar />
-            <BodyPart />
-            <Footer />
-          </Route> 
-
-          <Route path='/exercises'>
-            <Navbar />
-            <Exercises />
-            <Footer />
-          </Route>       
+          <Route path='/about' component={About} />
+          <Route path='/bodypart' component={BodyPart} />
+          <Route path='/exercises/:bodypart' component={Exercises} />
+          <Route path='/' component={Start} />
         </Switch>
-
+        
+        {/* the Footer component is not present in the Home page */}
+        {location.pathname!=='/' && <Footer />}
+        
       </div>
-    </Router>
   );
 }
 
-export default App;
+
+/* Exporting "App" wrapped inside higher order component "withRouter" makes {location} available as props
+   and all components inside App (even those not rendered with Route) to have access to 
+   this.props.history, making those components able to redirect a user */
+export default withRouter(App);
