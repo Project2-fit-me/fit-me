@@ -2,54 +2,43 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import './BodyPart.css';
 
-import BBicon from './BodyPart-pics/Body-Back-icon.svg';
-import BFicon from './BodyPart-pics/Body-Front-icon.svg';
+import BBicon from './BodyPart-pics/Body-Back-icon.jpg';
+import BFicon from './BodyPart-pics/Body-Front-icon.jpg';
 import BB from './BodyPart-pics/Body-Back.jpg';
 import BF from './BodyPart-pics/Body-Front.jpg';
+
 
 const BodyFrontImg = (
   <figure>
     <img src={BF} alt='Body Front' useMap="#bodypart-front" />
     <map name="bodypart-front">
-      <area className='calves-area' alt="Calves" href="../exercises" coords="156,749,358,975" shape="rect" />
-      <area className='legs-area' alt="Legs" href="../exercises" coords="158,478,357,717" shape="rect" />
-      <area className='arms-area' alt="Arms" href="../exercises" coords="348,258,461,476" shape="rect" />
-      <area className='arms-area' alt="Arms" href="../exercises" coords="166,258,55,475" shape="rect" />
-      <area className='abs-area' alt="Abs" href="../exercises" coords="332,288,180,457" shape="rect" />
-      <area className='chest-area' alt="Chest" href="../exercises" coords="166,199,190,186,208,178,225,173,239,169,251,165,270,165,286,170,304,180,319,188,338,200,345,213,348,230,343,252,337,267,329,278,315,281,295,281,277,280,260,280,227,281,206,280,188,280,171,262,160,222" shape="poly" />
-      <area className='shoulders-area' alt="Shoulders" href="../exercises" coords="123,251,134,240,138,230,148,221,152,215,156,206,162,192,173,188,189,180,200,174,189,161,177,157,162,163,147,168,134,179,123,194,119,219" shape="poly" />
-      <area className='shoulders-area' alt="Shoulders" href="../exercises" coords="396,240,353,221,344,194,321,179,310,169,317,161,323,155,336,159,352,163,370,168,385,185,392,204,394,225" shape="poly" />
+      <area className='calves-area' alt="Calves" href="../exercises" coords="91,371,167,372,169,488,80,487" shape="poly" />
+      <area className='legs-area' alt="Legs" href="../exercises" coords="80,261,178,262,167,360,90,361" shape="poly" />
+      <area className='arms-area' alt="Arms" href="../exercises" coords="172,136,196,126,230,281,206,284" shape="poly" />
+      <area className='arms-area' alt="Arms" href="../exercises" coords="80,126,85,175,65,285,37,277,65,123" shape="poly" />
+      <area className='abs-area' alt="Abs" href="../exercises" coords="87,145,165,148,165,206,130,251,93,212" shape="poly" />
+      <area className='chest-area' alt="Chest" href="../exercises" coords="81,98,102,92,121,87,135,90,152,93,167,105,171,127,155,142,122,139,96,140,85,125,80,108" shape="poly" />
+      <area className='shoulders-area' alt="Shoulders" href="../exercises" coords="68,118,75,105,79,91,91,88,95,81,53,77,47,103,53,116" shape="poly" />
+      <area className='shoulders-area' alt="Shoulders" href="../exercises" coords="156,78,201,81,202,122,180,118" shape="poly" />
     </map>
-  </figure>    
+  </figure>  
 );
+
 
 const BodyBackImg = (
   <figure>
     <img src={BB} alt='Body Back' useMap="#bodypart-back" />
     <map name="bodypart-back">
-      <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="112,186,49" shape="circle" />
-      <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="340,187,50" shape="circle" />
-      <area className='back-area' alt="Back" href="/exercises" coords="172,153,173,168,175,194,171,215,149,236,143,254,139,305,148,322,160,350,156,384,153,406,150,427,175,429,208,442,228,445,243,438,268,434,290,433,303,424,300,381,298,353,305,309,308,288,309,277,304,249,292,230,280,213,278,185,278,161,280,152,254,135,231,124,204,127" shape="poly" />
-      <area className='arms-area' alt="Arms" href="/exercises" coords="326,254,423,570" shape="rect" />
-      <area className='arms-area' alt="Arms" href="/exercises" coords="127,247,21,575" shape="rect" />
-      <area className='legs-area' alt="Legs" href="/exercises" coords="137,448,320,688" shape="rect" />
-      <area className='calves-area' alt="Calves" href="/exercises" coords="129,715,322,975" shape="rect" />
+      <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="156,73,187,83,185,119,158,114" shape="poly" />
+      <area className='shoulders-area' alt="Shoulders" href="/exercises" coords="64,74,39,86,30,100,40,121,65,108" shape="poly" />
+      <area className='back-area' alt="Back" href="/exercises" coords="66,80,114,61,154,80,149,206,108,228,77,203" shape="poly" />
+      <area className='arms-area' alt="Arms" href="/exercises" coords="156,118,179,121,206,278,175,285" shape="poly" />
+      <area className='arms-area' alt="Arms" href="/exercises" coords="37,287,69,159,65,116,53,116,45,129,5,270" shape="poly" />
+      <area className='legs-area' alt="Legs" href="/exercises" coords="68,230,154,229,162,289,148,342,121,353,103,351,73,346,63,287" shape="poly" />
+      <area className='calves-area' alt="Calves" href="/exercises" coords="76,356,119,361,152,351,162,402,160,485,72,485,67,399" shape="poly" />
     </map>
-  </figure>    
-);
-
-const BodyFrontIcon = (
-  <figure>
-    <img className='icon' src={BFicon} alt='click to show body front' onClick={() => this.changeImage()}/>
   </figure>  
 );
-
-const BodyBackIcon = (
-  <figure>
-    <img className='icon' src={BBicon} alt='click to show body back' onClick={() => this.changeImage()}/>
-  </figure>  
-);
-
 
 
 
@@ -57,7 +46,7 @@ class BodyPart extends Component {
     constructor(props){
       super(props);
       this.state = {
-        isBF: true
+        isBF: true,
       };
     }
 
@@ -68,13 +57,17 @@ class BodyPart extends Component {
     render() {
       return (
         <main>
-          <figcaption>
-            Choose the body part you want
-          </figcaption>
+          <figcaption class='captionChoose'> Choose the body part you want </figcaption>
+          <div className='images'>
 
-          {this.state.isBF ? BodyFrontImg : BodyBackImg} 
+            {this.state.isBF ? BodyFrontImg : BodyBackImg} 
 
-          {this.state.isBF ? BodyBackIcon : BodyFrontIcon}           
+            <figure className='icon'>
+              <img src={this.state.isBF ? BBicon : BFicon} alt={this.state.isBF ? 'Click to show body back' : 'Click to show body front'} 
+                  onClick={() => this.changeImage()}/>
+              <figcaption class='captionFlip'> {this.state.isBF ? 'Back' : 'Front'} </figcaption>
+            </figure>            
+          </div>
         </main>
       );
     }
