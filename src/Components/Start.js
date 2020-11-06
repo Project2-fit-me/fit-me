@@ -12,8 +12,8 @@ function Start() {
       </video>
       <div className="logo">
         <Logo className="logoSize" />
+        <p className="keepMoving">We keep moving</p>
       </div>
-      <p className="keepMoving">we keep moving</p>
 
       <div>
         <Link
