@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../reset.css';
 import './BodyPart.css';
 
 import BBicon from './Images/BodyPart-pics/Body-Back-icon.jpg';
