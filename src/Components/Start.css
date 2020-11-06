@@ -1,9 +1,8 @@
 html,
 body {
   margin: 0;
-  height: 100%;
+
   overflow: hidden;
-  background-color: blanchedalmond;
 }
 .start {
   /* background-image: url("./Images/fitnessImage.jpg"); */
@@ -16,7 +15,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 200px;
 }
 
 .button {
@@ -47,26 +45,22 @@ body {
 
 .keepMoving {
   display: flex;
-  padding-bottom: 100px;
+
   font-weight: bolt;
   font-size: 16px;
   font-weight: 600;
   font-size: 20px;
 }
 
-/* #backgroundVideo {
-  height: 100%;
-  width: 100%;
-  float: left;
-  top: 0;
-  padding: none;
-  position: fixed;
-} */
+#backgroundVideo {
+  width: auto;
+  position: absolute;
+  opacity: 0.5;
+  height: -webkit-fill-available;
+  z-index: -1;
+}
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(194, 208, 212);
-  }
   .logoSize {
     max-height: 80px;
   }
@@ -79,9 +73,6 @@ body {
   }
 }
 @media only screen and (min-width: 1050px) {
-  body {
-    background-color: rgba(255, 0, 0, 0.24);
-  }
   .logoSize {
     max-height: 200px;
   }

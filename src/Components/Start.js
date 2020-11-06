@@ -7,9 +7,9 @@ import video from "./Images/video.mp4";
 function Start() {
   return (
     <div className="start">
-      {/* <video id="backgroundVideo" autoPlay loop muted>
-        <source src={video} type="video.mp4" />
-      </video> */}
+      <video id="backgroundVideo" autoPlay="autoplay" loop="loop" muted="muted">
+        <source src={video} type="video/mp4" />
+      </video>
       <div className="logo">
         <Logo className="logoSize" />
       </div>
