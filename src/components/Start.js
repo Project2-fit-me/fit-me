@@ -1,31 +1,31 @@
-import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import './Start.css';
+import { ReactComponent as Logo } from "./Media/fitMeLogo.svg";
+import { Link } from "react-router-dom";
+import video from "./Media/video.mp4";
 
 
-class Start extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
+function Start() {
+  return (
+    <div className="start">
+      <video id="backgroundVideo" autoPlay="autoplay" loop="loop" muted="muted">
+        <source src={video} type="video/mp4" />
+      </video>
+      <div className="logo">
+        <Logo className="logoSize" />
+        <p className="keepMoving">We keep moving</p>
+      </div>
 
-      };
-    }
-
-    render() {
-      return (
-        <div></div>
-      );
-    }
+      <div>
+        <Link
+          to="/bodypart"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <button className="button">Start</button>
+        </Link>{" "}
+      </div>
+    </div>
+  );
 }
-
-
-// specifying default props + expected prop types  
-Start.defaultProps = {
-    name: 'xx',	
-};
-
-Start.propTypes = {
-    name: PropTypes.string,
-};
 
 
 export default Start;
