@@ -6,6 +6,7 @@ import SocialMedia from "./SocialMedia";
 function About() {
   return (
     <div>
+      
       <Link to="/"> Back</Link>
       <div className="aboutUs">
         <h2>About Us</h2>

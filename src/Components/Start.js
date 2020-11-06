@@ -17,7 +17,7 @@ function Start() {
 
       <div>
         <Link
-          to="/body-part"
+          to="/main/bodypart"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <button className="button">Start</button>
