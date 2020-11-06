@@ -3,31 +3,31 @@ map area {
 }
 
 .calves-area {
-    cursor: url('./BodyPart-pics/calvesIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/calvesIcon.png'), auto;
 }
 
 .legs-area {
-    cursor: url('./BodyPart-pics/legsIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/legsIcon.png'), auto;
 }
 
 .arms-area {
-    cursor: url('./BodyPart-pics/armsIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/armsIcon.png'), auto;
 }
 
 .abs-area {
-    cursor: url('./BodyPart-pics/absIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/absIcon.png'), auto;
 }
 
 .chest-area {
-    cursor: url('./BodyPart-pics/chestIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/chestIcon.png'), auto;
 }
 
 .shoulders-area {
-    cursor: url('./BodyPart-pics/shouldersIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/shouldersIcon.png'), auto;
 }
 
 .back-area {
-    cursor: url('./BodyPart-pics/backIcon.png'), auto;
+    cursor: url('./Exercises/BodyPart-pics/backIcon.png'), auto;
 }
 
 main {
