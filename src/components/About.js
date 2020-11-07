@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import './About.css';
 
 import AboutUs from './about-children/AboutUs';
 import ContactUs from './about-children/ContactUs';
