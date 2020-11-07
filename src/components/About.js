@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 import AboutUs from './about-children/AboutUs';
 import ContactUs from './about-children/ContactUs';
@@ -10,25 +10,21 @@ class About extends Component {
     constructor(props){
       super(props);
       this.state = {
-
       };
     }
 
     render() {
-      return [<AboutUs key={'About Us'}/>, <ContactUs key={'Contacts'}/>, <SocialMedia key={'Social Net Icons'}/>];
+      return (
+        <div className='about'>
+          <Link to="/"> Back </Link>
+          <AboutUs />
+          <ContactUs />
+          <SocialMedia />
+        </div>
+      );
     }
 }
 
-
-
-// specifying default props + expected prop types  
-About.defaultProps = {
-    name: 'xx',	
-};
-
-About.propTypes = {
-    name: PropTypes.string,
-};
 
 
 export default About;

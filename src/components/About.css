@@ -1,0 +1,22 @@
+.about {
+  background-color: blanchedalmond;
+}
+
+.aboutUs {
+    color: #212432;
+    font-family: Maison Neue, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+      sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+  
+}
