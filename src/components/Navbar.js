@@ -1,34 +1,26 @@
-import logo from '../logo.svg';
+import { ReactComponent as Logo } from './Media/fitMeLogo.svg';
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
-
+import "./Navbar.css";
 
 class Navbar extends Component {
     constructor(props){
       super(props);
       this.state = {
-
       };
     }
 
     render() {
       return (
 
-        <div></div>
+        <div>
+          <nav className="Navbar">
+            <Logo className="NavLogo" />
+          </nav>
+        </div>
 
       );
     }
 }
-
-
-// specifying default props + expected prop types  
-Navbar.defaultProps = {
-    name: 'xx',	
-};
-
-Navbar.propTypes = {
-    name: PropTypes.string,
-};
 
 
 export default Navbar;
