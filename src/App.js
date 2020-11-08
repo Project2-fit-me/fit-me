@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route, Redirect} from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,20 +12,36 @@ import BodyPart from './components/BodyPart';
 
 
 const App = ({location}) => (
+
       <div className="App">
 
-        {/* the Navbar component is not present in the Home page */}
-        {location.pathname!=='/' && <Navbar />}
+        {/* the Navbar component is only present in 3 routes */}
+        {location.pathname !== '/' && <Navbar />}
         
         <Switch>
-          <Route path='/about' component={About} />
-          <Route path='/bodypart' component={BodyPart} />
-          <Route path='/exercises/:bodypart' component={Exercises} />
-          <Route path='/' component={Start} />
+
+          <Route exact path='/' component={Start} />
+
+          <Route exact path='/about' component={About} />
+          <Redirect from='/about/:id' to='/about' />
+
+          <Route exact path='/bodypart' component={BodyPart} />
+          <Redirect from='/bodypart/:id' to='/bodypart' />
+
+          <Route exact path='/exercises/:bodypart' component={Exercises} />
+
+          <Redirect from='/exercises/:bodypart/:id' to='/exercises/:bodypart' />
+
+          {/* this redirect needs to be here because the "from=" is not exact */}
+          <Redirect from='/exercises' to='/bodypart' />
+
+          {/* in case the user types anything else in the address bar */}
+          <Redirect to='/' />
+
         </Switch>
         
-        {/* the Footer component is not present in the Home page */}
-        {location.pathname!=='/' && <Footer />}
+        {/* the Footer component is only present in 3 routes */}
+        {location.pathname !== '/' && <Footer />}
         
       </div>
 );
