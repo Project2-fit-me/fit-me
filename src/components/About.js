@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import './About.css';
 
@@ -7,25 +7,13 @@ import ContactUs from './about-children/ContactUs';
 import SocialMedia from './about-children/SocialMedia';
 
 
-class About extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-      };
-    }
-
-    render() {
-      return (
+const About = () => (
         <div className='about'>
           <Link to="/"> Back </Link>
           <AboutUs />
           <ContactUs />
           <SocialMedia />
         </div>
-      );
-    }
-}
-
-
+);
 
 export default About;

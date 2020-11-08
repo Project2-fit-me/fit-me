@@ -1,21 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 
-class Footer extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-
-      };
-    }
-
-    render() {
-      return (
-        <div></div>
-
-      );
-    }
-}
-
+const Footer = () => (
+    <div className="Main-footer">
+      <div className="container">
+        <ul className="Link">
+          <li>
+            <Link to="/about" className="underline">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+        <p className="col-sm">
+          &copy;{new Date().getFullYear()} Fit-Me | All right reserved | Terms
+          Of Service
+        </p>
+      </div>
+    </div>
+);
 
 export default Footer;

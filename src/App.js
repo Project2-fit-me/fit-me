@@ -1,10 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 
-import {
-  Switch,
-  Route
-} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -14,8 +11,7 @@ import Exercises from './components/Exercises';
 import BodyPart from './components/BodyPart';
 
 
-function App({location}) {
-  return (
+const App = ({location}) => (
       <div className="App">
 
         {/* the Navbar component is not present in the Home page */}
@@ -32,9 +28,7 @@ function App({location}) {
         {location.pathname!=='/' && <Footer />}
         
       </div>
-  );
-}
-
+);
 
 /* Exporting "App" wrapped inside higher order component "withRouter" makes {location} available as props
    and all components inside App (even those not rendered with Route) to have access to 
