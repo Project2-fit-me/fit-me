@@ -1,7 +1,4 @@
 .about {
-}
-
-.about {
   color: #212432;
   font-family: Maison Neue, Helvetica Neue, Helvetica, Arial, Lucida Grande,
     sans-serif;
@@ -11,10 +8,13 @@
   flex-direction: column;
 }
 
-.contactUs {
+.back {
   display: flex;
-  flex-direction: column;
+  padding-left: 100px;
 }
 
-.inputContainer {
+@media only screen and (max-width: 700px) {
+  .back {
+    padding-left: 20px;
+  }
 }

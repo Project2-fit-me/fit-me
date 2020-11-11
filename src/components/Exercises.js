@@ -16,17 +16,41 @@ class Exercises extends Component {
     console.log("hello");
     this.fetchExercises();
   }
+  componentDidUpdate() {
+    console.log("hello");
+    this.fetchExercises();
+  }
+
+  bodyPartNumberGenerator = (bodyPartString) => {
+    switch (bodyPartString) {
+      case "abs":
+        return 10;
+      case "arms":
+        return 8;
+      case "back":
+        return 12;
+      case "calves":
+        return 14;
+      case "chest":
+        return 11;
+      case "legs":
+        return 9;
+      case "shoulders":
+        return 13;
+      default:
+        return 10;
+    }
+  };
+
   fetchExercises = () => {
-    let abs = 10;
-    let arms = 8;
-    let back = 12;
-    let calves = 14;
-    let chest = 11;
-    let legs = 9;
-    let shoulders = 13;
+    let bodyPartCategoryNumber = this.bodyPartNumberGenerator(
+      this.props.match.params.bodypart
+    );
 
     axios
-      .get(`https://wger.de/api/v2/exercise/?language=2&category=${abs}`)
+      .get(
+        `https://wger.de/api/v2/exercise/?language=2&category=${bodyPartCategoryNumber}`
+      )
 
       .then((response) =>
         this.setState({

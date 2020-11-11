@@ -17,14 +17,14 @@ class SocialMedia extends Component {
   render() {
     return (
       <div className="social-container">
-        <div className="followTitle">
+        {/* <div className="followTitle">
           <h3>Follow us</h3>
-        </div>
+        </div> */}
         <div className="icons">
-          <a href="https://www.youtube.com" className="youtube social">
+          <a href="https://www.youtube.com" className="youtube social ">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
-          <a href="https://www.facebook.com" className="facebook social">
+          <a href="https://www.facebook.com" className="facebook social ">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
           <a href="https://www.twitter.com" className="twitter social">
