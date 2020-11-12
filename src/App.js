@@ -9,6 +9,7 @@ import Start from './components/Start';
 import About from './components/About';
 import Exercises from './components/Exercises';
 import BodyPart from './components/BodyPart';
+import ExercisesHeader from './components/exercises-children/ExercisesHeader';
 
 
 const App = ({location}) => (
@@ -17,7 +18,7 @@ const App = ({location}) => (
 
         {/* the Navbar component is only present in 3 routes */}
         {location.pathname !== '/' && <Navbar />}
-        
+        {location.pathname == '/exercises' && <ExercisesHeader />}
         <Switch>
 
           <Route exact path='/' component={Start} />
