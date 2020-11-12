@@ -1,25 +1,30 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faYoutube, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import "./SocialMedia.css";
 
 class SocialMedia extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-      };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    render() {
-      return (
-
-        <div className="social-container">
+  render() {
+    return (
+      <div className="social-container">
+        {/* <div className="followTitle">
           <h3>Follow us</h3>
-          <a href="https://www.youtube.com" className="youtube social">
+        </div> */}
+        <div className="icons">
+          <a href="https://www.youtube.com" className="youtube social ">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
-          <a href="https://www.facebook.com" className="facebook social">
+          <a href="https://www.facebook.com" className="facebook social ">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
           <a href="https://www.twitter.com" className="twitter social">
@@ -29,9 +34,9 @@ class SocialMedia extends Component {
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </div>
-
-      );
-    }
+      </div>
+    );
+  }
 }
 
 export default SocialMedia;

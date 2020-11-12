@@ -1,0 +1,41 @@
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.crop {
+  background-image: url(./about.jpg);
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
+
+.text {
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: xx-large;
+  padding-bottom: 30px;
+}
+
+.p1 {
+  padding-bottom: 20px;
+}
+p {
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  .aboutUs {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
