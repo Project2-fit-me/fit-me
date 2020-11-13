@@ -1,6 +1,6 @@
 .Main-Header {
     background-color: #457B9D;
-    padding-top: 1em;
+    padding: 1em;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -8,7 +8,7 @@
 .Back-button{
     display: flex;
     flex-direction: row;
-    font-size: x-large;
+    font-size: large;
     color:white;
 }
 .containerV2{
@@ -17,6 +17,6 @@
    
 }
 .underlineV2{
-    padding: 15px;
+    padding: 10px;
     color: aliceblue;
 }
