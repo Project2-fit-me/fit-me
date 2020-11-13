@@ -16,7 +16,9 @@ class ExercisesList extends Component {
     // how to pass the info (exercisesAPI) from the API? as props? key?
     render() {
         return (
-            <div></div>
+            <div>
+                
+            </div>
             /*exercisesAPI.map(item => <ExercisesCard key={exercisesAPI.id} />);*/
         );
     }

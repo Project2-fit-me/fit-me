@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-
+import './Exercises.css';
 
 import ExercisesHeader from './exercises-children/ExercisesHeader';
 import ExercisesList from './exercises-children/ExercisesList';
+import ExercisesCardDetailed from "./exercises-children/ExercisesCardDetailed";
 
 
 class Exercises extends Component {
@@ -15,7 +16,14 @@ class Exercises extends Component {
     }
 
     render() {
-      return [<ExercisesHeader key={'Exercises\' Header'}/>, <ExercisesList key={'Exercises\' List'}/>];
+      return (
+        <main>
+          <ExercisesHeader /> 
+          <ExercisesList>
+            <ExercisesCardDetailed />
+          </ExercisesList>  
+        </main>
+      );    
     }
 }
 

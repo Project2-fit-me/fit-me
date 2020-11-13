@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
 
+
 class ExercisesCardDetailed extends Component {
     constructor(props){
       super(props);
@@ -12,9 +13,9 @@ class ExercisesCardDetailed extends Component {
 
     render() {
       return (
+        <div>
 
-        <div></div>
-
+        </div>
       );
     }
 }
