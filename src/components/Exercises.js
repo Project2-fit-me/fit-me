@@ -62,10 +62,10 @@ class Exercises extends Component {
   render() {
     return (
       <div>
+        
         {this.state.exercises.map((item) => (
           <p>{item.name}</p>
         ))}
-        <ExercisesHeader key={"Exercises' Header"} />,
         <ExercisesList key={"Exercises' List"} />,
       </div>
     );
