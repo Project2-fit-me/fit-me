@@ -16,7 +16,6 @@ import axios from 'axios';
 
 class App extends Component {
   constructor(props){
-    //only need to pass props to super() if one is using this.props inside constructor()
     super();
     this.state = {categories:{}, res_EnImgCategory:{}};
   }
@@ -50,6 +49,8 @@ class App extends Component {
 
       res.data.results.forEach(el => categories = {...categories, [el.name]:el.id});
 
+      this.setState({categories: categories});
+
       // array filled with all object values
       const categoriesValues = Object.values(categories); 	
     
@@ -68,11 +69,10 @@ class App extends Component {
                 
                 this.setState({res_EnImgCategory: res_EnImgCategory});
               });
+              
             });
           }
       );
-
-      this.setState({categories: categories, res_EnImgCategory: res_EnImgCategory});
           
     });
     

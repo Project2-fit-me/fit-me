@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {withRouter} from 'react-router';
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types';
+
 import BFicon from './BodyPart-pics/Body-Front-icon.jpg';
 import BBicon from './BodyPart-pics/Body-Back-icon.jpg';
 import './Exercises.css';

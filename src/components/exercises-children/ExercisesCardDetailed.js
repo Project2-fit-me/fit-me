@@ -11,22 +11,21 @@ class ExercisesCardDetailed extends Component {
     }
 
     render() {
+      const {results, handleClick} = this.props;
       return (
-        <div>
-
+        <div className='exercisesCardDetailed'>
+          <img src={results.images[0]} alt={results.name} />
+          <div> {results.name} </div>
+          <div> {results.description} </div>
         </div>
       );
     }
 }
 
 
-// specifying default props + expected prop types  
-ExercisesCardDetailed.defaultProps = {
-    name: 'xx',	
-};
-
 ExercisesCardDetailed.propTypes = {
-    name: PropTypes.string,
+    results: PropTypes.object,
+    handleClick: PropTypes.func
 };
 
 

@@ -29,3 +29,31 @@ figcaption span {
     font-size: 0.7em;
     color: rgb(197, 59, 49);
 }
+
+.exercisesList {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+    gap: 50px;
+    justify-content: center;
+    align-items: center;    
+}
+
+.exercisesCard, .exercisesCardDetailed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: rgb(197, 59, 49);
+    text-align: center;
+}
+
+.exercisesCard img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
