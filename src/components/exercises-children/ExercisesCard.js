@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import ExercisesCardDetailed from "./ExercisesCardDetailed";
 import defaultPic from '../Media/no-images-available.jpg' 
 
 class ExercisesCard extends Component {
