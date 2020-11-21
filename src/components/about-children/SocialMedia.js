@@ -5,11 +5,6 @@ import {faYoutube, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-b
 
 
 class SocialMedia extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-      };
-    }
 
     render() {
       return (

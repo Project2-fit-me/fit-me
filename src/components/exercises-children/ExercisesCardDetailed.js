@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 
 class ExercisesCardDetailed extends Component {
     constructor(props){
-      super(props);
+      super();
       this.state = {
-
       };
     }
 

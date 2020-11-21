@@ -44,7 +44,7 @@ const BodyBackImg = (
 
 class BodyPart extends Component {
     constructor(props){
-      super(props);
+      super();
       this.state = {
         isBF: true
       };

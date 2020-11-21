@@ -4,29 +4,17 @@ import PropTypes from 'prop-types';
 
 
 class ExercisesHeader extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-      };
-    }
 
     render() {
       return (
-        <div>
-          <figcaption> {this.props.bodypart} exercises </figcaption>          
-        </div>
+          <figcaption> {this.props.category} exercises </figcaption>          
       );
     }
 }
 
 
-// specifying default props + expected prop types  
-ExercisesHeader.defaultProps = {
-    name: 'xx',	
-};
-
 ExercisesHeader.propTypes = {
-    name: PropTypes.string,
+  category: PropTypes.string,
 };
 
 

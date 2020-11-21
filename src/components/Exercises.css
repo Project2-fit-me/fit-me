@@ -1,5 +1,31 @@
+.backFigure {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.backFigure:hover {
+    cursor: pointer;
+}
+
+.backBF {
+    width: 35%;
+}
+
+.backBB {
+    width: 35%;
+    opacity: 0.4;
+}
+
 figcaption {
-    margin: 60px 20px;     
+    margin: 40px 20px;     
     font-size: 2em;
     text-align: center;
+}
+
+figcaption span {    
+    font-size: 0.7em;
+    color: rgb(197, 59, 49);
 }

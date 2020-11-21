@@ -18,7 +18,7 @@ class App extends Component {
   constructor(props){
     //only need to pass props to super() if one is using this.props inside constructor()
     super();
-    this.state = {categories:null, res_EnImgCategory:null, loading:true};
+    this.state = {categories:{}, res_EnImgCategory:{}};
   }
 
   componentDidMount() {
@@ -28,7 +28,9 @@ class App extends Component {
 
       axios.get(`https://wger.de/api/v2/exerciseimage/?language=2&limit=${res.data.count}`)
       .then(res => this.nextRequests(res.data.results, res.data.results.map(el => el.exercise)));
+
     });
+
   }
 
 
@@ -41,19 +43,17 @@ class App extends Component {
 
     // res_EnImgCategory  - get exercises in english and with image, for a particular category
     //                    - object like {categoryID(e.g., 8): array of objects, categoryID(e.g., 9): array of objects, etc}
+    let res_EnImgCategory = {};	
 
     axios.get('https://wger.de/api/v2/exercisecategory')
     .then(res => {
 
       res.data.results.forEach(el => categories = {...categories, [el.name]:el.id});
-      this.setState({categories: categories}, ()=> {
 
-        let res_EnImgCategory = {};				
-
-        // array filled with all object values
-        const categoriesValues = Object.values(this.state.categories); 	
+      // array filled with all object values
+      const categoriesValues = Object.values(categories); 	
     
-        categoriesValues.forEach(el => 
+      categoriesValues.forEach(el => 
           { 
             axios.get(`https://wger.de/api/v2/exercise/?language=2&category=${el}`)
             .then(res => {
@@ -64,21 +64,24 @@ class App extends Component {
                 res_EnImgCategory[el] = res.data.results.filter(el => exID_EnImg.includes(el.id));
         
                 // adding array of image URLs to the object of each exercise
-                res_EnImgCategory[el].map(el => el.images = res_EnImg.filter(elem => elem.exercise === el.id).map(elem => elem.image));
-      
+                res_EnImgCategory[el].map(el => el.images = res_EnImg.filter(elem => elem.exercise === el.id).map(el => el.image));
+                
+                this.setState({res_EnImgCategory: res_EnImgCategory});
               });
             });
           }
-        );
+      );
 
-        this.setState({res_EnImgCategory: res_EnImgCategory}, ()=>this.setState({loading:false}));
-      });
-
+      this.setState({categories: categories, res_EnImgCategory: res_EnImgCategory});
+          
     });
+    
   }
 
 
+
   render() {
+
     return (
 
       <div className="App">
@@ -117,7 +120,7 @@ class App extends Component {
   }
 }
 
-/* Exporting "App" wrapped inside higher order component "withRouter" makes {location} available as props
-   and all components inside App (even those not rendered with Route) to have access to 
-   this.props.history, making those components able to redirect a user */
+	/* Exporting App wrapped inside higher order component "withRouter" makes location, history and match props
+     available to App, and automatically to all those components inside <Route component={}/> 
+     (not to those inside render={ () => } prop) */
 export default withRouter(App);

@@ -1,0 +1,23 @@
+.loader {
+  width: 40px;
+  height: 40px;
+  background: #000000;
+  box-sizing: border-box;
+  animation: flip 1.5s linear infinite;
+  margin-bottom: 40px;
+}
+
+@keyframes flip {
+  0% {
+    transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+  }
+  
+  100% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+    
