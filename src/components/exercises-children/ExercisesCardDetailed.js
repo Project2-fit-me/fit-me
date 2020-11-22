@@ -8,7 +8,6 @@ class ExercisesCardDetailed extends Component {
       super(props);
       this.state = {
         counter: -1,
-
         currentImageURL: '',
       };
     }
@@ -33,7 +32,7 @@ class ExercisesCardDetailed extends Component {
       return (
         <div className='exercisesCardDetailed' onClick={handleClick}>
           <div className='div_1_CardDetailed'>
-            <img src={this.state.currentImageURL} alt={results.name} />
+            <img src={this.state.counter ===-1 ? results.images[0] : this.state.currentImageURL} alt={results.name} />
             <div className='name_CardDetailed'> {results.name} </div>          
           </div>          
           <div className='desc_CardDetailed'> {results.description.replace(/(<([^>]+)>)/gi,'')} </div>
