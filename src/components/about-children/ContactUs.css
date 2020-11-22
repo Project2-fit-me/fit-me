@@ -1,0 +1,48 @@
+.contactUs {
+    display: flex;
+    flex-direction: column;
+  
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+p {
+    padding-bottom: 20px;
+}
+  
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+  
+    padding-bottom: 20px;
+  
+    padding-top: 20px;
+}
+
+.emailContainer {
+    display: flex;
+    flex-direction: column;
+  
+    padding-bottom: 20px;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;  
+    padding-bottom: 20px;
+}
+  
+.note {
+    padding-bottom: 20px; 
+    font-size: xx-small;
+    color: gray;
+}
+
+@media only screen and (max-width: 700px) {
+    .contactUs {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+}
