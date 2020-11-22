@@ -11,10 +11,11 @@ class ExercisesCard extends Component {
 
     render() {
 
-      const {name, id, images, handleclick} = this.props;
+      const {name, id, images, handleClick} = this.props;
+
       return (
-        <div id={id} className='exercisesCard'>
-          <img src={images[0]} alt={name} />
+        <div className='exercisesCard'>
+          <img id={id} src={images[0]} alt={name} onClick={handleClick}/>
           <div> {name} </div>
         </div>
       );
@@ -24,7 +25,7 @@ class ExercisesCard extends Component {
 
 // specifying default props + expected prop types  
 ExercisesCard.defaultProps = {
-    name: 'No exercises/images available yet (working on it).',
+    name: 'No exercises/images available yet (working on it)',
     images: [defaultPic],
 };
 

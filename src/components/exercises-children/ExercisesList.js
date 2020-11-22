@@ -12,7 +12,7 @@ class ExercisesList extends Component {
 
       this.state = {
         showList: true,  
-        exID: null,      
+        exID: '',      
       };
 
       this.showList = this.showList.bind(this);      
@@ -20,23 +20,22 @@ class ExercisesList extends Component {
 
     showList(event){
       this.setState(state => ({showList: !state.showList}), 
-                    ()=>{this.state.showList ?
-                         this.setState({exID: null}) :
-                         this.setState({exID: event.target.id})}
+                    ()=>this.setState({exID: event.target.id})
       );
     }
     
     render() {
+        const {results} = this.props;
         return (                         
-          <div className='exercisesList'>
+          <div className={results.length && this.state.showList ? 'exercisesList' : 'containerCardDetailed'}>
             {
-            this.props.results.length ?  
+            results.length ?  
             (
               this.state.showList ?
-              this.props.results.map((el, index) => 
+              results.map((el, index) => 
                 <ExercisesCard key={el.id} handleClick={this.showList} {...el} id={index} />)
               :
-              <ExercisesCardDetailed results={this.props.results[this.state.exID]} handleClick={this.showList}/>
+              <ExercisesCardDetailed results={results[Number(this.state.exID)]} handleClick={this.showList}/>
             )
             :
             <ExercisesCard />
