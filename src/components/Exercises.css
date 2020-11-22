@@ -95,3 +95,13 @@ figcaption span {
 .exercisesCard img:hover, .exercisesCardDetailed:hover {
     cursor:pointer;
 }
+
+@media only screen and (max-width:500px) {
+    .div_1_CardDetailed {
+        flex-direction: column;
+    }
+
+    .name_CardDetailed {
+        margin: 20px 0 0 0;
+    }
+}
