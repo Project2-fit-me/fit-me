@@ -57,7 +57,7 @@ class BodyPart extends Component {
     render() {
       return (
         <main>
-          <figcaption className='captionChoose'> Choose the body part you want </figcaption>
+          <figcaption className='captionChoose'> Choose a body part </figcaption>
           <div className='images'>
 
             {this.state.isBF ? BodyFrontImg : BodyBackImg} 

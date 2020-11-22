@@ -43,8 +43,7 @@ class Exercises extends Component {
 
         content = (
           <>
-            <ExercisesHeader category={category}/> 
-            <ExercisesList results={results[categoryID]} />
+            <ExercisesList category={category} results={results[categoryID]} />
           </>
         );
 

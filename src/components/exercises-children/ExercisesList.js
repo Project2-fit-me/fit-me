@@ -25,9 +25,13 @@ class ExercisesList extends Component {
     }
     
     render() {
-        const {results} = this.props;
-        return (                         
-          <div className={results.length && this.state.showList ? 'exercisesList' : 'containerCardDetailed'}>
+        const {category, results} = this.props;
+        const extraCaption = <span> {this.state.showList ? (results.length ? 'pick one for details' : '') : 'click below to show all'} </span>; 
+
+        return (    
+        <>  
+          <figcaption> {category} exercises<br/>{extraCaption} </figcaption>                       
+          <div className={this.state.showList ? 'exercisesList' : 'containerCardDetailed'}>
             {
             results.length ?  
             (
@@ -41,6 +45,7 @@ class ExercisesList extends Component {
             <ExercisesCard />
             }
           </div>
+        </>  
         );
     }
 }
@@ -48,6 +53,7 @@ class ExercisesList extends Component {
 
 
 ExercisesList.propTypes = {
+    category: PropTypes.string,
     results: PropTypes.array,
 };
 

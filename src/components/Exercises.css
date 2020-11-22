@@ -26,7 +26,7 @@ figcaption {
 }
 
 figcaption span {    
-    font-size: 0.7em;
+    font-size: 0.6em;
     color: rgb(197, 59, 49);
 }
 
@@ -49,7 +49,7 @@ figcaption span {
     text-align: center;
 }
 
-.exercisesCard {
+.exercisesCard, .exercisesCardDefault {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +70,7 @@ figcaption span {
     justify-content: center;
 }
 
-.exercisesCard img {
+.exercisesCard img, .exercisesCardDefault img {
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 10px;
