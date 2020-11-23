@@ -1,26 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
-import defaultPic from '../Media/no-images-available.jpg' 
+import defaultPic from '../Media/no-images-available.png' 
 
-class ExercisesCard extends Component {
-    constructor(props){
-      super();
-      this.state = {
-      };
-    }
-
-    render() {
-
-      const {name, id, images, handleClick} = this.props;
-
-      return (
+const ExercisesCard = ({name, id, images, handleClick}) => (
         <div className={id!==undefined ? 'exercisesCard' : 'exercisesCardDefault'}>
           <img id={id} src={images[0]} alt={name} onClick={handleClick}/>
           <div> {name} </div>
         </div>
-      );
-    }
-}
+);
 
 
 // specifying default props + expected prop types  

@@ -18,18 +18,17 @@ class Exercises extends Component {
     render() {
            
       const {match, categories, results} = this.props;
-
-      let content;
       
-      const loading = Object.keys(categories).length === 0 || 
-                      Object.keys(results).length !== 
-                      Object.keys(categories).length;
+      const numbCategories = Object.keys(categories).length;
+      const loading = numbCategories === 0 || 
+                      Object.keys(results).length !== numbCategories;
 
       const bodypart = match.params.bodypart;
       const category = bodypart[0].toUpperCase() + bodypart.slice(1); 
-      const categoryID = Number(categories[category]);                      
+      const categoryID = categories[category];                      
 
-
+      let content;
+      
       if(loading) {
 
         content = (
@@ -75,7 +74,6 @@ Exercises.propTypes = {
 };
 
 
-// withRouter is used so that this component has access to the history object prop
+// withRouter is used so that this component has access to the match object prop
 // - without it, it doesnt has that prop because its called using render={} in App.js
-// - using inline render was the only way i found to pass props to <Exercises />
 export default withRouter(Exercises);

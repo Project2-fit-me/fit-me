@@ -19,8 +19,8 @@ class ExercisesList extends Component {
     }
 
     showList(event){
-      this.setState(state => ({showList: !state.showList}), 
-                    ()=>this.setState({exID: event.target.id})
+      this.setState({exID: Number(event.target.id)}, 
+                    ()=>this.setState(state => ({showList: !state.showList}))
       );
     }
     
@@ -39,7 +39,7 @@ class ExercisesList extends Component {
               results.map((el, index) => 
                 <ExercisesCard key={el.id} handleClick={this.showList} {...el} id={index} />)
               :
-              <ExercisesCardDetailed results={results[Number(this.state.exID)]} handleClick={this.showList}/>
+              <ExercisesCardDetailed {...results[this.state.exID]} handleClick={this.showList}/>
             )
             :
             <ExercisesCard />
