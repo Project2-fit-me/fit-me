@@ -91,6 +91,7 @@ class Exercises extends Component {
         {this.state.exercises.map((item) => (
           <div>
             <p>{item.name}</p>
+            <p>{item.description}</p>
             {item.images.map((element) => (
               <img height="150px" width="150px" src={element.image} />
             ))}
