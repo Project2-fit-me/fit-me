@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-
-
 import ExercisesCard from './ExercisesCard';
 
 
@@ -14,9 +12,14 @@ class ExercisesList extends Component {
     }
 
     // how to pass the info (exercisesAPI) from the API? as props? key?
-    render() {
+    render(props) {
         return (
-            <div></div>
+            <div>
+                {/* <section>
+                    <img src={props.image}/>
+                </section> */}
+                
+            </div>
             /*exercisesAPI.map(item => <ExercisesCard key={exercisesAPI.id} />);*/
         );
     }

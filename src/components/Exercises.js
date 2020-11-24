@@ -9,6 +9,7 @@ class Exercises extends Component {
     super(props);
     this.state = {
       exercises: [],
+      images: "",
     };
   }
 
@@ -16,10 +17,10 @@ class Exercises extends Component {
     console.log("hello");
     this.fetchExercises();
   }
-  componentDidUpdate() {
-    console.log("hello");
-    this.fetchExercises();
-  }
+  // componentDidUpdate() {
+  //   // console.log("hello");
+  //   this.fetchExercises();
+  // }
 
   bodyPartNumberGenerator = (bodyPartString) => {
     switch (bodyPartString) {
@@ -47,24 +48,53 @@ class Exercises extends Component {
       this.props.match.params.bodypart
     );
 
+    // First we get all of the exercises
     axios
       .get(
-        `https://wger.de/api/v2/exercise/?language=2&category=${bodyPartCategoryNumber}`
+        `https://wger.de/api/v2/exercise/?language=2&category=${bodyPartCategoryNumber}&limit=80`
       )
+      .then((response) => {
+        let exercises = response.data.results;
+        let images;
 
-      .then((response) =>
-        this.setState({
-          exercises: response.data.results,
-        })
-      );
+        // Then here below we get all of the images
+        axios
+          .get(`https://wger.de/api/v2/exerciseimage/?language=2&limit=204`)
+          .then((response) => {
+            images = response.data.results;
+            // Reassign the exercises to include the correct images
+            exercises = exercises
+              .map((exercise) => {
+                // we maintain the exercise now adding all of the images with the images property
+                exercise = {
+                  ...exercise,
+                  images: images.filter(
+                    (image) => image.exercise === exercise.id
+                  ),
+                };
+
+                // If there is images in this exercise return it to the new array
+                if (exercise.images.length) {
+                  return exercise;
+                }
+              })
+              // filter out any undefined elements so that we only have the exercises with images
+              .filter((element) => element != undefined);
+            this.setState({ exercises: exercises });
+          });
+      });
   };
 
   render() {
     return (
       <div>
-        
         {this.state.exercises.map((item) => (
-          <p>{item.name}</p>
+          <div>
+            <p>{item.name}</p>
+            {item.images.map((element) => (
+              <img height="150px" width="150px" src={element.image} />
+            ))}
+          </div>
         ))}
         <ExercisesList key={"Exercises' List"} />,
       </div>
