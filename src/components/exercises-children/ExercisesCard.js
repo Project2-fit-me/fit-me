@@ -1,33 +1,23 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
+function ExercisesCard(props) {
+  return (
+    <div>
+      <p>{props.name}</p>
 
-class ExercisesCard extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-
-      };
-    }
-
-    render() {
-      return (
-
-        <div></div>
-
-      );
-    }
+      <img height="150px" width="150px" src={props.images[0].image} />
+    </div>
+  );
 }
 
-
-// specifying default props + expected prop types  
+// specifying default props + expected prop types
 ExercisesCard.defaultProps = {
-    name: 'xx',	
+  name: "xx",
 };
 
 ExercisesCard.propTypes = {
-    name: PropTypes.string,
+  name: PropTypes.string,
 };
-
 
 export default ExercisesCard;
