@@ -1,0 +1,23 @@
+.Pop-Up{
+    display: flex;
+    height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.9s;
+}
+.Pop-up-content{
+    position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  background-color: white;
+  margin: 100px; 
+
+}
