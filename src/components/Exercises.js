@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import ExercisesHeader from "./exercises-children/ExercisesHeader";
 import ExercisesList from "./exercises-children/ExercisesList";
+import ExercisesCard from "./exercises-children/ExercisesCard";
+import ExercisesCardDetailed from "./exercises-children/ExercisesCardDetailed";
 
 class Exercises extends Component {
   constructor(props) {
@@ -10,6 +12,8 @@ class Exercises extends Component {
     this.state = {
       exercises: [],
       images: "",
+      currentExerciseId: true,
+      showModal: false,
     };
   }
 
@@ -84,25 +88,36 @@ class Exercises extends Component {
           });
       });
   };
+  displayPopUpCard = (item) => {
+    this.setState({ currentExerciseId: item.id });
+    this.openModal();
+  };
+
+  openModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
 
   render() {
     return (
       <div>
         {this.state.exercises.map((item) => (
-          <div>
-            <p>{item.name}</p>
-            <p>
-              {item.description.replace(
-                /<p>|<ul>|<em>|<li>|<\/p>|<\/li>|<\/ul>|<\/em>/g,
-                ""
-              )}
-            </p>
-            {item.images.map((element) => (
-              <img height="150px" width="150px" src={element.image} />
-            ))}
+          <div onClick={() => this.displayPopUpCard(item)}>
+            <ExercisesCard {...item} />
           </div>
         ))}
-        <ExercisesList key={"Exercises' List"} />,
+        {this.state.showModal ? (
+          <ExercisesCardDetailed
+            {...this.state.exercises.filter(
+              (exercise) => exercise.id === this.state.currentExerciseId
+            )[0]}
+            closeModal={this.closeModal}
+          />
+        ) : null}
+        <ExercisesList key={"Exercises' List"} />
       </div>
     );
   }
