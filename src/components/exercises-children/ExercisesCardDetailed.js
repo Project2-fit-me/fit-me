@@ -9,17 +9,22 @@ function ExercisesCardDetailed(props) {
         <button onClick={props.closeModal}> X </button>
       </div>
       <div className="Pop-up-content">
+        <div className="Pop-up-header">
         {props.name}
-        {props.images.map((element) => (
-          <img height="150px" width="150px" src={element.image} />
-        ))}
-
-        <p>
-          {props.description.replace(
-            /<p>|<ul>|<em>|<li>|<\/p>|<\/li>|<\/ul>|<\/em>/g,
-            ""
-          )}
-        </p>
+        </div>
+        <div className="Pop-up-img">
+          {props.images.map((element) => (
+            <img height="150px" width="150px" src={element.image} />
+          ))}
+        </div>
+        <div className="Description">
+          <p>
+            {props.description.replace(
+              /<p>|<ul>|<em>|<li>|<\/p>|<\/li>|<\/ul>|<\/em>/g,
+              ""
+            )}
+          </p>
+        </div>
       </div>
     </div>
   );
