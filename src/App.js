@@ -10,13 +10,14 @@ import About from "./components/About";
 import Exercises from "./components/Exercises";
 import BodyPart from "./components/BodyPart";
 import ExercisesHeader from "./components/exercises-children/ExercisesHeader";
+import WishList from "./components/WishList";
 
 const App = ({ location }) => (
   <div className="App">
     {/* the Navbar component is only present in 3 routes */}
     {location.pathname !== "/" && <Navbar />}
     {location.pathname.includes("/exercises") && <ExercisesHeader />}
-    
+
     <Switch>
       <Route exact path="/" component={Start} />
 
@@ -27,6 +28,8 @@ const App = ({ location }) => (
       <Redirect from="/bodypart/:id" to="/bodypart" />
 
       <Route exact path="/exercises/:bodypart" component={Exercises} />
+
+      <Route exact path="/exercises/:bodypart/wishlist" component={WishList} />
 
       <Redirect from="/exercises/:bodypart/:id" to="/exercises/:bodypart" />
 

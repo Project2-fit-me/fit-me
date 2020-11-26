@@ -2,14 +2,28 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./ExercisesCard.css";
 
-function ExercisesCard(props) {
-  return (
-    <div className="card">
-      <p className="name">{props.name}</p>
+class ExercisesCard extends Component {
+  state = {
+    isFavorite: false,
+  };
 
-      <img height="200vw" width="300vw" src={props.images[0].image} />
-    </div>
-  );
+  handleClickFavorite = () => {
+    this.setState({ isFavorite: !this.state.isFavorite });
+  };
+  render() {
+    return (
+      <div className="card">
+        <p className="name">{this.props.name}</p>
+
+        <img height="200vw" width="300vw" src={this.props.images[0].image} />
+        <div
+          id="favorite"
+          onClick={this.handleClickFavorite}
+          className={this.state.isFavorite ? "isFavorite" : "notFavorite"}
+        ></div>
+      </div>
+    );
+  }
 }
 
 // specifying default props + expected prop types

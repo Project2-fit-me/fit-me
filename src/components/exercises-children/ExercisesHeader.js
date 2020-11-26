@@ -14,12 +14,22 @@ class ExercisesHeader extends Component {
       <div className="Main-Header">
         <div className="containerV2">
           <ul className="Back-button">
-            <li>
+            <li className="li">
               <Link to="/bodypart" className="underlineV2">
                 &#60; Back
               </Link>
             </li>
           </ul>
+          <Link
+            to="/exercises/:bodypart/wishlist"
+            id="favoritee"
+            className="isFavoritee"
+          ></Link>
+          {/* <div
+            id="favoritee"
+            onClick={this.handleClickFavorite}
+            className="isFavoritee"
+          ></div> */}
         </div>
       </div>
     );
