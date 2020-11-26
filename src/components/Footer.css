@@ -1,48 +1,40 @@
 .Main-footer {
-    color: white;
-    background-color: #457B9D;
-    padding-top: 3em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  color: white;
+  background-color: #457b9d;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 .Link {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    /* padding-left: 20px; */
-    padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  /* padding-left: 20px; */
+  padding: 15px;
 }
 
 .underline {
-    font-size: large;
-    text-decoration: none; 
-    color: inherit;
+  font-size: large;
+  text-decoration: none;
+  color: inherit;
 }
 
-.col-sm{
-    padding: 15px;
-    /* padding-right: 20px;
+.col-sm {
+  padding: 15px;
+  /* padding-right: 20px;
     padding-bottom: 20px; */
 }
-.container{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-@media only screen and (max-width: 700px){
-    .container{
-       
-        flex-direction: column;
-        
-        
-    }
-     .Link {
-                
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .Link {
     justify-content: flex-start;
-                
-     }
-    
+  }
 }
