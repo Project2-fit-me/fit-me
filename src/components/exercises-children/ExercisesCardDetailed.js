@@ -5,10 +5,10 @@ import "./ExercisesCardDetails.css";
 function ExercisesCardDetailed(props) {
   return (
     <div className="Pop-Up">
+      <div className="Pop-up-content">
       <div className="closeBtn">
         <button onClick={props.closeModal}> X </button>
       </div>
-      <div className="Pop-up-content">
         <div className="Pop-up-header">
         {props.name}
         </div>

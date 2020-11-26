@@ -1,41 +1,113 @@
-.Pop-Up{
-    display: flex;
-    height: 100%;
+.Pop-Up {
+  display: flex;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.9s;
 }
-.Pop-up-content{
-   height: 50vh;
+.Pop-up-content {
+  height: 50vh;
   width: 50vw;
   text-align: center;
   margin-top: 30px;
   background-color: white;
   margin: auto;
-  border-radius: 25px; 
-
+  border-radius: 25px;
 }
 
-.Description{
-    padding: 25px;
+.Description {
+  padding: 25px;
 }
 
-.Pop-up-img{
-    padding: 25px;
+.Pop-up-img {
+  padding: 25px;
 }
 
-.Pop-up-header{
-    font-size: xx-large;
-    padding: 9px;
+.Pop-up-header {
+  font-size: xx-large;
+  padding: 9px;
 }
-.closeBtn{
+.closeBtn {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  font-size: 60px;
+  position: absolute;
+  margin: 10px;
+  opacity: 0.6; 
+/* position: absolute;
+  right: 250px;
+  width: 32px;
+  height: 32px; */
+  
+}
+.closeBtn:hover {
+  opacity: 1;
+} 
+
+/* .outer {
+    position: relative;
+    margin: auto;
+    width: 70px;
+    margin-top: 200px;
     cursor: pointer;
+  }
+  
+  .closeBtn {
+    width: inherit;
     text-align: center;
-    border-radius: 15px;
-}
+  }
+  
+  label { 
+    font-size: .8em; 
+    line-height: 4em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .closeBtn:before, .closeBtn:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: #FFC107;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+  
+  .closeBtn:before {
+    top: 50%; 
+    transform: rotate(45deg);  
+  }
+  
+  .closeBtn:after {  
+    bottom: 50%;
+    transform: rotate(-45deg);  
+  }
+  
+  .outer:hover label {
+    opacity: 1;
+  }
+  
+  .outer:hover .closeBtn:before,
+  .outer:hover .closeBtn:after {
+    transform: rotate(0);
+  }
+  
+  .outer:hover .closeBtn:before {
+    top: 0;
+  }
+  
+  .outer:hover .closeBtn:after {
+    bottom: 0;
+  } */
