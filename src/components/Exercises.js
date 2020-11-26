@@ -106,8 +106,12 @@ class Exercises extends Component {
     return (
       <div className="exercisesList">
         {this.state.exercises.map((item) => (
-          <div onClick={() => this.displayPopUpCard(item)}>
-            <ExercisesCard {...item} />
+          <div>
+            <ExercisesCard
+              {...item}
+              item={item}
+              displayPopUpCard={this.displayPopUpCard}
+            />
           </div>
         ))}
         {this.state.showModal ? (

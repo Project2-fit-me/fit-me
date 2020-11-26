@@ -10,15 +10,24 @@ class ExercisesCardDetailed extends Component {
     };
   }
   componentDidMount() {
-    this.intervalID = setInterval(()=>
-      this.setState(state=>({counter:
-        state.counter === this.props.images.length-1 ? 0 : state.counter+1})        
-      ), 500);
+    this.intervalID = setInterval(
+      () =>
+        this.setState((state) => ({
+          counter:
+            state.counter === this.props.images.length - 1
+              ? 0
+              : state.counter + 1,
+        })),
+      1000
+    );
   }
+
   componentWillUnmount() {
     clearInterval(this.intervalID);
   }
+
   render() {
+    console.log(this.props.images[this.state.counter].image);
     return (
       <div className="Pop-Up">
         <div className="Pop-up-content">
@@ -27,10 +36,11 @@ class ExercisesCardDetailed extends Component {
           </div>
           <div className="Pop-up-header">{this.props.name}</div>
           <div className="Pop-up-img">
-            {this.props.images.map((element) => (
-              
-              <img height="150px" width="150px" src={element.image[this.state.counter]} />
-            ))}
+            <img
+              height="150px"
+              width="150px"
+              src={this.props.images[this.state.counter].image}
+            />
           </div>
           <div className="Description">
             <p>
