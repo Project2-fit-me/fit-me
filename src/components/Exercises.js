@@ -5,6 +5,7 @@ import ExercisesHeader from "./exercises-children/ExercisesHeader";
 import ExercisesList from "./exercises-children/ExercisesList";
 import ExercisesCard from "./exercises-children/ExercisesCard";
 import ExercisesCardDetailed from "./exercises-children/ExercisesCardDetailed";
+import "./Exercises.css";
 
 class Exercises extends Component {
   constructor(props) {
@@ -103,7 +104,7 @@ class Exercises extends Component {
 
   render() {
     return (
-      <div>
+      <div className="exercisesList">
         {this.state.exercises.map((item) => (
           <div onClick={() => this.displayPopUpCard(item)}>
             <ExercisesCard {...item} />
