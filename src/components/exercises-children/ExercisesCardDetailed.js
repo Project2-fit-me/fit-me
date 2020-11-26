@@ -2,32 +2,48 @@ import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import "./ExercisesCardDetails.css";
 
-function ExercisesCardDetailed(props) {
-  return (
-    <div className="Pop-Up">
-      <div className="closeBtn">
-        <button onClick={props.closeModal}> X </button>
+class ExercisesCardDetailed extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+    };
+  }
+  componentDidMount() {
+    this.intervalID = setInterval(()=>
+      this.setState(state=>({counter:
+        state.counter === this.props.images.length-1 ? 0 : state.counter+1})        
+      ), 500);
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
+  render() {
+    return (
+      <div className="Pop-Up">
+        <div className="Pop-up-content">
+          <div className="closeBtn">
+            <button onClick={this.props.closeModal}> X </button>
+          </div>
+          <div className="Pop-up-header">{this.props.name}</div>
+          <div className="Pop-up-img">
+            {this.props.images.map((element) => (
+              
+              <img height="150px" width="150px" src={element.image[this.state.counter]} />
+            ))}
+          </div>
+          <div className="Description">
+            <p>
+              {this.props.description.replace(
+                /<p>|<ul>|<em>|<li>|<\/p>|<\/li>|<\/ul>|<\/em>/g,
+                ""
+              )}
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="Pop-up-content">
-        <div className="Pop-up-header">
-        {props.name}
-        </div>
-        <div className="Pop-up-img">
-          {props.images.map((element) => (
-            <img height="150px" width="150px" src={element.image} />
-          ))}
-        </div>
-        <div className="Description">
-          <p>
-            {props.description.replace(
-              /<p>|<ul>|<em>|<li>|<\/p>|<\/li>|<\/ul>|<\/em>/g,
-              ""
-            )}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 //specifying default props + expected prop types
