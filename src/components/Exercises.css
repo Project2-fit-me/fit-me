@@ -1,0 +1,8 @@
+.exercisesList {
+  display: flex;
+  padding: 30px;
+  background-color: lightgray;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+}

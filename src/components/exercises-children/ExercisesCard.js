@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./ExercisesCard.css";
 
 function ExercisesCard(props) {
   return (
-    <div>
-      <p>{props.name}</p>
+    <div className="card">
+      <p className="name">{props.name}</p>
 
-      <img height="150px" width="150px" src={props.images[0].image} />
+      <img height="200vw" width="300vw" src={props.images[0].image} />
     </div>
   );
 }
