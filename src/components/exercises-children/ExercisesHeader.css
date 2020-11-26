@@ -1,22 +1,38 @@
 .Main-Header {
-    background-color: #457B9D;
-    padding: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #457b9d;
+  padding: 1em;
+  position: relative;
+  bottom: 0;
 }
-.Back-button{
-    display: flex;
-    flex-direction: row;
-    font-size: large;
-    color:white;
+.Back-button {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  color: white;
 }
-.containerV2{
-    display: flex;
-    justify-content: end;
-   
+.containerV2 {
+  display: flex;
+  justify-content: end;
+  justify-content: space-between;
 }
-.underlineV2{
-    padding: 10px;
-    color: aliceblue;
+.underlineV2 {
+  padding: 10px;
+  color: aliceblue;
+}
+.isFavoritee {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+  background-size: 100%;
+  align-self: flex-start;
+  filter: grayscale(100%);
+}
+
+#favoritee {
+  display: inline-table;
+  align-self: flex-end;
+}
+
+.li {
+  display: flex;
 }
