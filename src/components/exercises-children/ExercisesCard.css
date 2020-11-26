@@ -1,0 +1,14 @@
+.card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  margin: 20px;
+  width: 350px;
+  height: 300px;
+}
+.name {
+  padding-top: 30px;
+  font-size: 25px;
+  font: bold;
+}
