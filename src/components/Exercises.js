@@ -1,7 +1,9 @@
+/* eslint-disable array-callback-return */
+
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
-import ExercisesHeader from "./exercises-children/ExercisesHeader";
+
 import ExercisesList from "./exercises-children/ExercisesList";
 import ExercisesCard from "./exercises-children/ExercisesCard";
 import ExercisesCardDetailed from "./exercises-children/ExercisesCardDetailed";
@@ -84,7 +86,7 @@ class Exercises extends Component {
                 }
               })
               // filter out any undefined elements so that we only have the exercises with images
-              .filter((element) => element != undefined);
+              .filter((element) => element !== undefined);
             this.setState({ exercises: exercises });
           });
       });

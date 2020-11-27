@@ -86,6 +86,7 @@ class ExercisesCard extends Component {
             height="200vw"
             width="300vw"
             src={this.props.item.images[0].image}
+            alt="fu"
           />
           <p className="name">{this.props.item.name}</p>
         </div>

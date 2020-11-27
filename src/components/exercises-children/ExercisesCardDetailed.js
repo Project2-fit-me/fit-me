@@ -40,6 +40,7 @@ class ExercisesCardDetailed extends Component {
               height="150px"
               width="150px"
               src={this.props.images[this.state.counter].image}
+              alt="dsf"
             />
           </div>
           <div className="Description">
