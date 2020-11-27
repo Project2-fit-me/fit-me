@@ -16,7 +16,8 @@ const App = ({ location }) => (
   <div className="App">
     {/* the Navbar component is only present in 3 routes */}
     {location.pathname !== "/" && <Navbar />}
-    {location.pathname.includes("/exercises") && <ExercisesHeader />}
+    {(location.pathname.includes("/exercises") ||
+      location.pathname.includes("/wishlist")) && <ExercisesHeader />}
 
     <Switch>
       <Route exact path="/" component={Start} />
@@ -29,7 +30,7 @@ const App = ({ location }) => (
 
       <Route exact path="/exercises/:bodypart" component={Exercises} />
 
-      <Route exact path="/exercises/:bodypart/wishlist" component={WishList} />
+      <Route exact path="/wishlist" component={WishList} />
 
       <Redirect from="/exercises/:bodypart/:id" to="/exercises/:bodypart" />
 

@@ -20,11 +20,7 @@ class ExercisesHeader extends Component {
               </Link>
             </li>
           </ul>
-          <Link
-            to="/exercises/:bodypart/wishlist"
-            id="favoritee"
-            className="isFavoritee"
-          ></Link>
+          <Link to="/wishlist" id="favoritee" className="isFavoritee"></Link>
           {/* <div
             id="favoritee"
             onClick={this.handleClickFavorite}
