@@ -6,6 +6,8 @@
   margin: 20px;
   width: 350px;
   height: 300px;
+  border-radius: 10px;
+  border: outset;
 }
 .name {
   padding-top: 30px;

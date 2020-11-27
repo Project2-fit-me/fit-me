@@ -108,7 +108,6 @@ class Exercises extends Component {
         {this.state.exercises.map((item) => (
           <div>
             <ExercisesCard
-              {...item}
               item={item}
               displayPopUpCard={this.displayPopUpCard}
             />
